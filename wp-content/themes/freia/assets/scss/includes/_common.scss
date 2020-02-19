@@ -1,0 +1,285 @@
+// Container Styling
+
+html,
+body {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: $white;
+	overflow: auto;
+}
+
+.grid-container {
+	max-width: 120rem;
+	padding: 0;
+
+	@include breakpoint(large down) {
+		max-width: 90%;
+	}
+}
+
+.popup-active,
+.slideup-active {
+	overflow: hidden;
+}
+
+// Text Styling
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1;
+	margin-bottom: 0;
+}
+
+h1 {
+	font-family: $font-mont-heavy;
+	font-size: 6rem;
+	color: $black;
+	line-height: 1.2;
+
+	@include breakpoint(small down) {
+		font-size: 4rem;
+	}
+}
+
+h2 {
+	font-family: "Rubik-Bold";
+	font-style: normal;
+	font-size: 40px;
+	line-height: 47px;
+	text-align: center;
+	color: #17202A;
+	margin: 0 0 16px;
+}
+
+h3 {
+	font-family: "Rubik-Regular";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 32px;
+	line-height: 38px;
+	color: #17202A;
+}
+
+h4 {
+	font-family: $font-mont-bold;
+	font-size: 1.7rem;
+	color: $black;
+	line-height: 1.2;
+}
+
+h5 {
+	font-family: $font-mont-bold;
+	font-size: 1.7rem;
+	color: $black;
+	line-height: 1.2;
+}
+
+p {
+	font-family: "Rubik-Regular";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.02em;
+	color: #606A76;
+
+	a {
+		font-size: inherit;
+		color: inherit;
+		letter-spacing: inherit;
+		line-height: inherit;
+		border-bottom: 0.1rem solid #606A76;
+	}
+
+	span {
+		font-size: inherit;
+		color: inherit;
+		letter-spacing: inherit;
+		line-height: inherit;
+	}
+}
+
+a {
+	display: inline-block;
+	@include transition(all 0.5s ease-out);
+
+	&:hover {
+		color: inherit;
+		opacity: 0.6;
+	}
+}
+
+.ul-reset {
+	list-style: none;
+
+	li {
+		list-style: none;
+	}
+}
+
+ul {
+	@extend .ul-reset;
+	padding: 0;
+	margin: 0;
+
+	li {
+		font-family: $font-mont-light;
+		font-size: 1.7rem;
+		letter-spacing: 0.3rem;
+		line-height: 1;
+		text-transform: uppercase;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	li a {
+		font-family: inherit;
+		font-size: inherit;
+		color: inherit;
+		letter-spacing: inherit;
+		line-height: inherit;
+	}
+}
+
+// Visibility Setting
+
+.visuallyhidden {
+	clip: rect(0 0 0 0);
+	height: 1px; width: 1px;
+	margin: -1px; padding: 0; border: 0;
+	overflow: hidden;
+	position: absolute;
+}
+
+// Flexspace
+
+.flexspace {
+	&.desktop {
+		@include breakpoint(medium down) {
+			display: none;
+		}
+	}
+	&.tablet {
+		display: none;
+		@include breakpoint(medium only) {
+			display: block;
+		}
+		@include breakpoint(small only) {
+			display: none;
+		}
+	}
+	&.mobile {
+		display: none;
+		@include breakpoint(medium only) {
+			display: none;
+		}
+		@include breakpoint(small only) {
+			display: block;
+		}
+	}
+}
+
+input {
+	&::-webkit-input-placeholder {
+		opacity: 1;
+	}
+	&::-moz-placeholder {
+		opacity: 1;
+	}
+	&:-ms-input-placeholder {
+		opacity: 1;
+	}
+	&:-moz-placeholder {
+		opacity: 1;
+	}
+
+	&:focus::-webkit-input-placeholder { opacity: 0; }
+	&:focus:-moz-placeholder { opacity: 0; }
+	&:focus::-moz-placeholder { opacity: 0; }
+	&:focus:-ms-input-placeholder { opacity: 0; }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	transition: background-color 5000s ease-in-out 0s;
+	-webkit-text-fill-color: $black;
+}
+
+.wpcf7-not-valid-tip {
+	font-family: $font-mont-light;
+	font-size: 1.2rem !important;
+	margin-top: 0.5rem !important;
+}
+
+.wpcf7-response-output {
+	color: #fff !important;
+	border: none !important;
+	font-family: $font-mont-light;
+	font-size: 1.2rem;
+	margin: 0 auto !important;
+}
+
+.form__input {
+	margin-bottom: 3rem;
+
+	input {
+		background-color: transparent;
+		border: none;
+		border-bottom: 0.2rem solid #fff;
+		font-family: $font-mont-light;
+		font-size: 1.4rem;
+		line-height: 1;
+		padding: 1rem 2rem 0.5rem;
+		text-align: center;
+		width: 100%;
+
+		&::-webkit-input-placeholder {
+			opacity: 0.5;
+			color: #fff;
+		}
+
+		&::-moz-placeholder {
+			opacity: 0.5;
+			color: #fff;
+		}
+
+		&:-ms-input-placeholder {
+			opacity: 0.5;
+			color: #fff;
+		}
+
+		&:-moz-placeholder {
+			opacity: 0.5;
+			color: #fff;
+		}
+	}
+}
+
+.form__submit {
+	input {
+		background-color: #fff;
+		border: none;
+		border-radius: 2.8rem;
+		color: #000;
+		cursor: pointer;
+		font-family: $font-urwdin-medium;
+		font-size: 1.6rem;
+		padding: 1.4rem 4rem;
+	}
+
+	.ajax-loader {
+		display: block !important;
+		margin: 0.5rem auto !important;
+		text-align: center;
+	}
+}

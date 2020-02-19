@@ -1,0 +1,96 @@
+.timeline {
+	position: relative;
+	&__boxee {
+		position: relative;
+		width: 100%;
+		margin: 0 auto;
+		&::after {
+			content: '';
+			position: absolute;
+			width: 1px;
+			background-color: #EC0769;
+			top: 0;
+			bottom: 0;
+			left: 50%;
+			margin-left: -3px;
+		}
+		&--container {
+			padding: 0;
+			position: relative;
+			background-color: inherit;
+			width: 50%;
+			&::after {
+				content: '';
+				position: absolute;
+				width: 25px;
+				height: 25px;
+				right: -10px;
+				background-color: white;
+				border: 1px solid #EC0769;
+				top: 0;
+				border-radius: 50%;
+				z-index: 1;
+				background-image: url('../images/icon-step.png');
+				background-position: center center;
+				background-repeat: no-repeat;
+			}
+		}
+		&--left {
+			left: 0;
+			.timeline__boxee--content {
+				padding: 0 5%;
+				text-align: left;
+				@include breakpoint(medium down) {
+					padding: 0 15% 0 0;
+				}
+			}
+		}
+		&--right {
+			left: 50%;
+			&::after {
+				left:-15px;
+			}
+			.timeline__boxee--content {
+				padding: 0 0 0 5%;
+				text-align: left;
+				@include breakpoint(medium down) {
+					padding: 0 0 0 15%;
+				}
+			}
+		}
+		&--content {
+			margin: 0 0 100px;
+		}
+		&--count {
+			font-family: "Vera";
+			font-style: normal;
+			font-weight: normal;
+			font-size: 26px;
+			line-height: 32px;
+			color: #17202A;
+			opacity: 0.5;
+		}
+		h3 {
+			font-family: "Vera";
+			font-style: normal;
+			font-weight: normal;
+			font-size: 30px;
+			line-height: 36px;
+			color: #17202A;
+		}
+		p {
+			font-family: "Vera";
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 24px;
+			letter-spacing: 0.02em;
+			color: #17202A;
+			opacity: 0.72;
+		}
+	}
+	.vector {
+		position: absolute;
+		bottom: 0;
+	}
+}

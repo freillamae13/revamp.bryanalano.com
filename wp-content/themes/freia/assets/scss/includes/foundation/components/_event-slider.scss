@@ -1,0 +1,79 @@
+
+
+.slider-event-slider__date {
+	position: relative;
+
+	&:after {
+		content: '';
+		background-image: url(../images/ico-border-bottom.svg);
+		background-repeat: repeat-x;
+		background-size: auto 100%;
+		border-top: .1rem solid #b19c71;
+		bottom: -.3rem;
+		height: 1.4rem;
+		left: 0;
+		width: 100%;
+		position: absolute;
+		z-index: 1;
+	}
+
+	&:before {
+		content: '';
+		position: relative;
+		display: block;
+		background-color: $gold;
+		height: 2.2rem;
+		width: 2.2rem;
+		margin: 0 auto;
+		@include transform(rotate(45deg));
+	}
+}
+
+.slider-event-slider__title {
+	font-size: 4.2rem;
+	color: #fff;
+}
+
+.slider-event-slider__title-design {
+	position: relative;
+
+	&:after,
+	&:before {
+		content: '';
+		position: absolute;
+		background-color: $gold;
+	}
+
+	&:after {
+		width: calc(100% - 1.5rem);
+		top: 50%;
+		height: .1rem;
+	}
+
+	&:before {
+		height: .5rem;
+		width: .5rem;
+		top: calc(50% - .25rem);
+		@include transform(rotate(45deg));
+	}
+}
+
+.slider-event-slider__title-design--left {
+	&:after {
+		right: 0;
+	}
+
+	&:before {
+		left: .2rem;
+	}
+}
+
+.slider-event-slider__title-design--right {
+	&:after {
+		left: 0;
+	}
+
+	&:before {
+		right: .2rem;
+	}
+}

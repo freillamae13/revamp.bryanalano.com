@@ -1,0 +1,155 @@
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	padding: 3.5rem 0;
+	@include breakpoint(medium down) {
+		padding: 20px 0;
+	}
+	margin: 0;
+	&__logo {
+		padding-left: 8rem;
+		z-index: 100;
+		@include breakpoint(medium down) {
+			padding-left: 20px;
+		}
+		img {
+			height: 4.8rem;
+			width: auto;
+		}
+		.logo-desktop {
+			display: block;
+			@include breakpoint(medium down) {
+				display: none;
+			}
+		}
+		.logo-mobile {
+			display: none;
+			@include breakpoint(medium down) {
+				display: block;
+			}
+		}
+	}
+	&__nav {
+		padding-right: 8rem;
+		@include breakpoint(medium down) {
+			padding: 0;
+		}
+		ul {
+			li {
+				display: inline-block;
+				margin: 0 1.5rem;
+				a {
+					font-family: "Vera";
+					font-weight: normal;
+					font-size: 14px;
+					line-height: 24px;
+					letter-spacing: 0.02em;
+					color: #FFFFFF;
+					text-transform: capitalize;
+					text-decoration: none; 
+					border-bottom: 1px solid transparent;
+					@include transition(opacity 1s);
+					&:hover {
+						opacity: 1;
+						border-bottom: 1px solid #EC0769;
+					}
+				}
+				&.current-menu-item {
+					a {
+						opacity: 1;
+						border-bottom: 1px solid #EC0769;
+					}
+				}
+			}
+		}
+	}
+	&__dark {
+		position: relative;
+		background: linear-gradient(25.29deg, #17202A 23.01%, #017CDE 120.47%);
+		@include box-shadow(0px 10px 20px rgba(23, 32, 42, 0.2));
+	}
+}
+
+.nav {
+	&__desktop {
+		@include breakpoint(medium down) {
+			display: none;
+		}
+	}
+	&__mobile {
+		display: none;
+		width: 100%;
+		position: relative;
+		@include breakpoint(medium down) {
+			display: block;
+		}
+	}
+}
+
+#menuToggle {
+	display: block;
+	position: absolute;
+	top: -12px;
+	right: 20px;
+	z-index: 1;
+	-webkit-user-select: none;
+	user-select: none;
+	a {
+	text-decoration: none;
+	color: #232323;
+	transition: color 0.3s ease;
+	z-index: 3;
+	}
+	span {
+		display: block;
+		width: 33px;
+		height: 4px;
+		margin-bottom: 5px;
+		position: relative;
+		background: #cdcdcd;
+		border-radius: 3px;
+		z-index: 2;
+		transform-origin: 4px 0px;
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+					background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+					opacity 0.55s ease;
+		&:first-child {
+			transform-origin: 0% 0%;
+		}
+		&:nth-last-child(2) {
+			transform-origin: 0% 100%;
+		}
+	}
+}
+
+.nav__slidedown {
+	position: fixed;
+	top: -100%;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(25.29deg, #17202A 23.01%, #017CDE 120.47%);
+	@include box-shadow(0px 10px 20px rgba(23, 32, 42, 0.2));
+	@include transition(top 600ms cubic-bezier(0.17, 0.04, 0.03, 0.94));
+	&.active {
+		top: 0;
+	}
+	ul {
+		position: absolute;
+		top: 25%;
+		left: 0;
+		text-align: center;
+		width: 100%;
+		li {
+			display: block !important;
+			padding: 10px 0;
+			a {
+				color: #FFFFFF !important;
+				font-size: 24px;
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+.video-content {
+	&__container {
+		h3 {
+			font-family: "Rubik-Regular";
+			font-style: normal;
+			font-weight: normal;
+			font-size: 32px;
+			line-height: 38px;
+			color: #17202A;
+			margin: 32px 0;
+		}
+		iframe {
+			@include breakpoint(medium down) {
+				width: 100%;
+				height: 320px;
+			}
+		}
+	}
+}

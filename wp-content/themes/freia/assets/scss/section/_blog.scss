@@ -1,0 +1,130 @@
+.blog-list {
+	margin-top: -6%;
+	position: relative;
+	z-index: 1;
+	&__featured {
+		margin: 0 0 70px;
+		&--content {
+			h2 {
+				text-align: left;
+				font-size: 32px;
+				line-height: 38px;
+			}
+			p {
+				text-align: left;
+			}
+		}
+	}
+	&__all {
+		position: relative;
+	}
+	&__item {
+		margin: 0 0 50px;
+		img {
+			width: 100%;
+			height: auto;
+		}
+		h2 {
+			text-align: left;
+			font-family: "Rubik-Bold";
+			font-style: normal;
+			font-size: 18px;
+			line-height: 26px;
+			letter-spacing: 0.02em;
+			color: #17202A;
+		}
+		p {
+			display: inline-block;
+		}
+		a {
+			display: inline-block;
+			font-family: "Rubik-Regular";
+			font-style: normal;
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 24px;
+			letter-spacing: 0.02em;
+			color: #EC0769;
+			&:hover {
+				opacity: 1;
+				text-decoration: underline;
+			}
+		}
+	}
+	.vector__illustration--timeline {
+		top: 25%;
+	}
+}
+
+.blog-single {
+	&__banner {
+		margin-top: 72px;
+		&--img-box {
+			position: relative;
+			height: 480px;
+			width: 100%;
+			background: linear-gradient(132.23deg, #34A4FF -15.35%, #FFBCD9 106.72%);
+			border-radius: 0px 8px 8px 0px;
+			img {
+				position: absolute;
+				top: 50%;
+				right: -10%;
+				@include transform(translate(10%, -50%));
+			}
+		}
+		&--title {
+			padding: 0 10% 0 20%;
+			h1 {
+				font-family: "Rubik-Bold";
+				font-style: normal;
+				font-size: 32px;
+				line-height: 38px;
+				color: #17202A;
+			}
+		}
+		&--meta {
+			.date {
+				display: block;
+				margin-top: 15px;
+				font-family: "Rubik-Regular";
+				font-style: normal;
+				font-weight: normal;
+				font-size: 16px;
+				line-height: 24px;
+				letter-spacing: 0.02em;
+				color: #17202A;
+				opacity: 0.72;
+			}
+			.author {
+				display: block;
+				margin-top: 8px;
+				font-family: "Rubik-Regular";
+				font-style: normal;
+				font-weight: normal;
+				font-size: 16px;
+				line-height: 24px;
+				letter-spacing: 0.02em;
+				color: #17202A;
+				opacity: 0.72;
+			}
+		}
+		&--share {
+			margin-top: 15px;
+			.share--icons {
+				background: #17202A;
+				border-radius: 50%;
+				padding: 5px;
+				margin: 0 10px 0 0;
+			}
+		}
+	}
+	&__content {
+		position: relative;
+		margin-top: 100px;
+		p {
+			font-size: 18px;
+			line-height: 36px;
+			margin: 0 0 24px;
+		}
+	}
+}

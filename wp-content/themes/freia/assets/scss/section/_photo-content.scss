@@ -1,0 +1,55 @@
+.photo-content {
+	
+	@include breakpoint(medium down) {
+		padding: 20px 0;
+	}
+
+	&--reversed {
+
+		.photo-content__img {
+			@include order(1);
+
+			@include breakpoint(medium down) {
+				@include order(1);
+				margin: 0 0 3rem;
+			}
+		}
+
+		.photo-content__content {
+			@include order(2);
+			padding: 0 8rem;
+
+			@include breakpoint(medium down) {
+				@include order(2);
+				padding: 0 30px 30px;
+			}
+		}
+	}
+
+	&__img {
+		@include breakpoint(medium down) {
+			@include order(1);
+			margin: 0 0 3rem;
+		}
+	}
+
+	&__img img {
+		width: 100%;
+	}
+
+	&__content {
+		padding: 0 8rem;
+		.button {
+			margin-top: 2.4rem;
+		}
+
+		@include breakpoint(medium down) {
+			padding: 0 30px 30px;
+			@include order(2);
+		}
+	}
+
+	&__content-title {
+		margin: 0 0 3rem;
+	}
+}

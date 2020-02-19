@@ -1,0 +1,149 @@
+.form {
+	position: relative;
+	&__content {
+		text-align: center;
+	}
+	&__content--form {
+		margin: 50px 0;
+	}
+	&__input-submit {
+		background-image: url(../images/arrow-right.png);
+		background-repeat: no-repeat;
+		background-position: 85% center;
+	}
+	&__input, &__textarea, &__select {
+		text-align: left;
+		margin: 0 0 24px;
+		label {
+			width: 100%;
+			font-family: "Vera";
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 24px;
+			letter-spacing: 0.02em;
+			color: #17202A;
+			span {
+				color: red;
+			}
+		}
+		input {
+			text-align: left;
+			background: #FFFFFF;
+			border: 1px solid #17202A;
+			box-sizing: border-box;
+			border-radius: 24px;
+			height: 48px;
+			font-family: "Vera";
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 24px;
+			letter-spacing: 0.02em;
+			color: #17202A;
+			padding: 0 24px;
+			&::placeholder {
+				color: #17202A;
+			}
+			&:focus {
+				outline: none;
+			}
+		}
+		textarea {
+			text-align: left;
+			width: 100%;
+			background: #FFFFFF;
+			border: 1px solid #17202A;
+			box-sizing: border-box;
+			border-radius: 24px;
+			font-family: "Vera";
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 24px;
+			letter-spacing: 0.02em;
+			color: #17202A;
+			padding: 16px 24px;
+			&::placeholder {
+				color: #17202A;
+			}
+			
+			&:focus {
+				outline: none;
+			}
+		}
+		select {
+			width: 100%;
+			text-align: left;
+			background: #FFFFFF;
+			border: 1px solid #17202A;
+			box-sizing: border-box;
+			border-radius: 24px;
+			height: 48px;
+			font-family: "Vera";
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 24px;
+			letter-spacing: 0.02em;
+			color: #17202A;
+			padding: 0 24px;
+			-moz-appearance:none; /* Firefox */
+			-webkit-appearance:none; /* Safari and Chrome */
+			appearance:none;
+			background: url(../images/icon-more.png) no-repeat 97% center;
+			&::placeholder {
+				color: #17202A;
+			}
+			
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+	&__submit {
+		text-align: left;
+		.button {
+			background-color: #017CDE;
+			color: #ffffff;
+			&:focus {
+				outline: none;
+			}
+		}
+		&.btn--center {
+			text-align: center;
+			margin: 40px 0 0;
+		}
+	}
+	&__link {
+		a {
+			font-family: "Rubik-Bold";
+			font-style: normal;
+			font-size: 16px;
+			line-height: 19px;
+			text-align: center;
+			letter-spacing: 0.02em;
+			color: #017BDE;
+			border: 1px solid #017BDE;
+			box-sizing: border-box;
+			box-shadow: 0px 10px 20px rgba(1, 124, 222, 0.15);
+			border-radius: 24px;
+			padding: 15px 24px;
+		}
+	}
+	&__content-p {
+		padding: 30px 0 20px;
+		p {
+			font-family: "Rubik-Regular";
+			font-style: normal;
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 19px;
+			letter-spacing: 0.02em;
+			color: #17202A;
+			&:first-child {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
