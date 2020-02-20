@@ -48,9 +48,46 @@
 
 <body <?php body_class(); ?>>
 
-	<?php require get_stylesheet_directory() . '/inc/components/header.php'; ?>
+	<div id="header">
+		<div id="logo">
+			<a href="/bryanalano.com">
+			</a>
+		</div>
+		<ul class="nav-menu">
+			<li><a href="about.html">about</a></li>
+			<li><a href="portfolio.html">portfolio</a></li>
+			<li><a href="contact.html">contact</a></li>
+		</ul>
+		<div class="nav-mobile">
+			<div class="_1"></div>
+			<div class="_2"></div>
+			<div class="_3"></div>
+		</div>
+	</div>
+	<div id="nav-menu-mobile" class="nav-menu-mobile slideOutUp faster">
+		<div class="row align-middle text-center">
+		  	<div class="columns">
+		  		<ul class="links">
+					<li><a href="about.html">about</a></li>
+					<li><a href="#" class="sub-link">portfolio</a>
+						<div class="sub-container">
+							<ul class="sub">
+								<li><a href="lifestyle.html">lifestyle</a></li>
+								<li><a href="portfolio.html">portraits</a></li>
+								<li><a href="commissions.html">commissions</a></li>
+								<li><a href="videos.html">videos</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="contact.html">contact</a></li>
+				</ul>
+				<ul class="socials">
+					<li><a href="about.html">Instagram</a></li>
+					<li><a href="portfolio.html">Facebook</a></li>
+					<li><a href="contact.html">Vimeo</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
 	<main class="wrapper">
-		<div id="loader-wrapper">
-			<div id="loader"><img src="<?= get_stylesheet_directory_uri(); ?>/assets/images/logo-main.png" alt="Credit Fundr Logo"></div>
-		</div>

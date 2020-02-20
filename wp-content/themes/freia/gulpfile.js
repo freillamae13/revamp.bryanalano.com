@@ -20,6 +20,7 @@ gulp.task('minifycss-components', function () {
 		'./assets/css/jquery-ui.min.css',
 		'./assets/css/modulobox.min.css',
 		'./assets/css/animate.min.css',
+		'./assets/css/fullpage.css',
 		])
 		.pipe(concat('components.css'))
 		.pipe(cleanCSS())
@@ -68,13 +69,9 @@ gulp.task('compress-main', function () {
 gulp.task('concat-main', function () {
 	return gulp.src([
 		'./assets/js/jquery.min.js',
-		'./assets/js/owl.carousel.min.js',
-		'./assets/js/jquery.waypoints.min.js',
-		'./assets/js/jquery.inview.min.js',
-		'./assets/js/jquery.matchHeight-min.js',
 		'./assets/js/FontAwesome/fontawesome.min.js',
-		'./assets/js/FontAwesome/brands.min.js',
-		'./assets/js/FontAwesome/solid.min.js',
+		'./assets/js/jquery-latest.min.js',
+		'./assets/js/fullpage.js',
 		'./assets/js/common.js'
 	])
 	.pipe(concat('main.js'))
