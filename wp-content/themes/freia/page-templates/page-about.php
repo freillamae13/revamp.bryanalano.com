@@ -18,3 +18,5 @@
 </div>
 
 <?php get_footer();
+
+Syntactics Inc. Training Hall, 2nd Floor, Egmedio Building, Corrales Avenue, Domingo Velez St, Cagayan de Oro, 9000 Misamis Oriental

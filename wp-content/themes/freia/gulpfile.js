@@ -72,6 +72,7 @@ gulp.task('concat-main', function () {
 		'./assets/js/FontAwesome/fontawesome.min.js',
 		'./assets/js/jquery-latest.min.js',
 		'./assets/js/fullpage.js',
+		'./assets/js/masonry.pkgd.min.js',
 		'./assets/js/common.js'
 	])
 	.pipe(concat('main.js'))
@@ -84,6 +85,7 @@ gulp.task('build-js', gulp.series(
 
 gulp.task('js:watch', function () {
 	gulp.watch('./assets/js/**/*.js', gulp.series(
-		'concat-main'
+		'concat-main',
+		'compress-main'
 	));
 });

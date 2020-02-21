@@ -4,13 +4,6 @@
 @import "../../node_modules/foundation-sites/scss/foundation.scss";
 
 
-// -------- COMPONENTS
-// @import '../css/font-awesome.min';
-// @import '../css/jquery-ui.min';
-// @import '../css/modulobox.min';
-// @import '../css/animate.min';
-
-
 // -------- INCLUDES
 @import "includes/variables";
 @import "includes/mixins";
@@ -22,14 +15,4 @@
 @import "includes/vector";
 
 // -------- GENERAL
-@import "section/header";
-@import "section/banner";
-@import "section/hero";
-@import "section/column-content";
-@import "section/photo-content";
-@import "section/video-content";
-@import "section/newsletter";
-@import "section/form";
-@import "section/timeline";
-@import "section/blog";
-@import "section/footer";
+@import "section/gallery";

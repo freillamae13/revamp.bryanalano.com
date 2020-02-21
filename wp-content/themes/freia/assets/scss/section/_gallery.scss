@@ -1,0 +1,23 @@
+.gallery {
+	padding: 134px 0 0;
+	&__grid {
+		&--wrapper {
+			padding: 30px;
+		}
+		&--item {
+			margin-bottom: 30px;
+			width: calc(95%/3);
+			&.expanded {
+				width: 100%;
+			}
+		}
+		&--image {
+			background-position: top center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			img {
+				opacity: 0;
+			}
+		}
+	}
+}
