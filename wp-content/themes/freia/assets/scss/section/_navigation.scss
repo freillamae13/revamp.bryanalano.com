@@ -1,0 +1,42 @@
+.nav-menu {
+	li {
+		a {
+			text-transform: lowercase;
+			&:hover {
+				font-weight: bold;
+			}
+		}
+		&.current-menu-item, &.current-page-ancestor {
+			a {
+				color: #FF4400 !important;
+			}
+		}
+	}
+	@include breakpoint(medium down) {
+		display: none;
+	}
+}
+
+.nav-light {
+	li {
+		&.current-menu-item, &.current-page-ancestor {
+			a {
+				color: #FF4400 !important;
+			}
+		}
+	}
+	@include breakpoint(medium down) {
+		display: none !important;
+	}
+}
+
+.nav-mobile {
+	float: right;
+	width: 40px;
+	cursor: pointer;
+	margin-top: 7px;
+	height: 57.99px;
+	background-image: url(../images/menu.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+}

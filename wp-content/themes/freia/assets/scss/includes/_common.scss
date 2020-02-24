@@ -244,6 +244,7 @@ body.about #content{
 }
 
 #footer .contact-form input[type="text"],
+#footer .contact-form input[type="email"],
 #footer .contact-form textarea{
 	border: 1px solid #ff5e23;
 }
@@ -276,6 +277,7 @@ body.about #content{
 }
 
 #footer .contact-form input[type="text"]:focus,
+#footer .contact-form input[type="email"]:focus,
 #footer .contact-form textarea:focus {
 	outline: -webkit-focus-ring-color auto 1px;
 	outline-color: #FE7340;

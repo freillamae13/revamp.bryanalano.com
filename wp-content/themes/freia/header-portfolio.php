@@ -18,7 +18,7 @@
 	<link rel="preload" id="style" href="<?= get_stylesheet_directory_uri(); ?>/assets/css/style.css" as="style" media="screen" crossorigin="anonymous">
 
 	<link rel="shortcut icon" href="<?= get_stylesheet_directory_uri(); ?>/assets/images/favicon.png">
-	
+
 	<script src="<?= get_stylesheet_directory_uri(); ?>/assets/js/jquery.min.js"></script>
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
@@ -41,7 +41,7 @@
 		<link rel="preload" type="text/css" media="screen" href="<?= get_stylesheet_directory_uri(); ?>/assets/css/style.css">
 	</noscript>
 
-	<?php 
+	<?php
 		wp_head();
 	?>
 </head>
@@ -56,14 +56,27 @@
 			<a href="/">
 			</a>
 		</div>
-		<?php 
-			wp_nav_menu([
-				'menu' => 'Main Navigation',
-				'menu_class' => 'nav-menu',
-				'menu_id' => '',
-				'container' => ''
-			]);
-		?>
+
+		<div class="menu-portfolio-menu-container">
+			<?php
+				wp_nav_menu([
+					'menu' => 'Portfolio Menu',
+					'menu_class' => 'nav-light',
+					'menu_id' => 'menu-portfolio-menu',
+					'container' => ''
+				]);
+			?>
+		</div>
+		<div class="menu-homepage-menu-container">
+			<?php
+				wp_nav_menu([
+					'menu' => 'Main Navigation',
+					'menu_class' => 'nav-menu',
+					'menu_id' => 'menu-homepage-menu',
+					'container' => ''
+				]);
+			?>
+			</div>
 		<div class="nav-mobile">
 			<!-- <div class="_1"></div>
 			<div class="_2"></div>
