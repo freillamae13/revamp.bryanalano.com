@@ -47,6 +47,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<div id="loader-wrapper">
+		<div id="loader"><img src="<?= get_stylesheet_directory_uri(); ?>/assets/images/BryanAlano_Logo_o.svg" alt="Bryan Alano Logo"></div>
+	</div>
 
 	<div id="header">
 		<div id="logo">

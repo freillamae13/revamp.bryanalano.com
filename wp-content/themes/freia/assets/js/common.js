@@ -2,6 +2,10 @@
 
 	$(document).ready(function() {
 
+		setTimeout(function(){
+			$('body').addClass('loaded');
+		}, 500);
+
 		if ($('#fullpage').length) {
 			$('#fullpage').fullpage({
 				autoScrolling: false,
