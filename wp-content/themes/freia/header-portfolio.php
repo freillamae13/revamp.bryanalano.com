@@ -41,9 +41,7 @@
 		<link rel="preload" type="text/css" media="screen" href="<?= get_stylesheet_directory_uri(); ?>/assets/css/style.css">
 	</noscript>
 
-	<?php
-		wp_head();
-	?>
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>

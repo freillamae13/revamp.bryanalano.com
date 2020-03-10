@@ -566,3 +566,15 @@ div#nav-menu-mobile ul.socials{
 	}
 
 }
+
+.social-items {
+	li:not(.block-title) {
+		display: inline-block;
+		vertical-align: middle;
+		img {
+			width: 18px;
+			height: auto;
+			margin: 0 5px 0 0;
+		}
+	}
+}

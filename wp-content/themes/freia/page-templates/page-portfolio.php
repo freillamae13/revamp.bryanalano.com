@@ -16,6 +16,13 @@
 			</div>
 		</div>
 	</div>
+	<div class="lightbox">
+		<div class="title"></div>
+		<div class="filter"></div>
+		<div class="arrowr"></div>
+		<div class="arrowl"></div>
+		<div class="close"></div>
+	</div>
 </section>
 
 <?php get_footer();
