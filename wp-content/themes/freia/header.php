@@ -68,7 +68,7 @@
 			<div class="_3"></div> -->
 		</div>
 	</div>
-	<div id="nav-menu-mobile" class="nav-menu-mobile faster slideInDown">
+	<div id="nav-menu-mobile" class="nav-menu-mobile">
 		<div class="row align-middle text-center">
 			<div class="columns">
 				<div class="menu-mobile-nav-container">
@@ -85,10 +85,13 @@
 						<li id="menu-item-18121" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18121"><a href="/contact/">CONTACT</a></li>
 					</ul>
 				</div>
-				<ul class="socials">
-					<li><a href="https://www.instagram.com/bryan.alano/" target="_blank" title="Instagram - Bryan Alano">Instagram</a></li>
-					<li><a href="https://www.linkedin.com/in/bryanalano" target="_blank" title="LinkedIn - Bryan Alano">LinkedIn</a></li>
-					<li><a href="https://vimeo.com/bryanalano" target="_blank" title="Vimeo - Bryan Alano">Vimeo</a></li>
+				<ul class="social-items">
+					<li class="block-title">Socials</li>
+					<li><a href="http://instagram.com/bryan.alano" target="_blank"><img src="<?= get_stylesheet_directory_uri(); ?>/assets/images/icon-ig-white.png" alt="Instagram Icon"></a></li>
+					<li><a href="http://www.facebook.com/bryanalanophotography" target="_blank"><img src="<?= get_stylesheet_directory_uri(); ?>/assets/images/icon-fb-white.png" alt="Facebook Icon"></a></li>
+					<li><a href="http://vimeo.com/bryanalano" target="_blank"><img src="<?= get_stylesheet_directory_uri(); ?>/assets/images/icon-vimeo-white.png" alt="Vimeo Icon"></a></li>
+					<li><a href="http://www.twitter.com/bryanalano" target="_blank"><img src="<?= get_stylesheet_directory_uri(); ?>/assets/images/icon-twitter-white.png" alt="Twitter Icon"></a></li>
+					<li><a href="https://www.linkedin.com/in/bryanalano/" target="_blank"><img src="<?= get_stylesheet_directory_uri(); ?>/assets/images/icon-linkedin-white.png" alt="Linkedin Icon"></a></li>
 				</ul>
 			</div>
 		</div>

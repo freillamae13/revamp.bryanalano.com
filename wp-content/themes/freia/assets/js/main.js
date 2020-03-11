@@ -8410,8 +8410,7 @@ if(window.jQuery && window.fullpage){
 		}
 
 		$('.nav-mobile').on('click', function() {
-			$('#header').addClass("opa0");
-			$('#nav-menu-mobile').addClass('animated');
+			$('#nav-menu-mobile').toggleClass('animated');
 			$('#nav-menu-mobile').toggleClass('slideInDown');
 			$('#nav-menu-mobile').toggleClass('slideOutUp');
 			$('body').toggleClass('nav-is-active');

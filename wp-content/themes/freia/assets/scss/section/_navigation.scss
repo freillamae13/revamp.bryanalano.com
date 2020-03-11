@@ -39,4 +39,7 @@
 	background-image: url(../images/menu.svg);
 	background-repeat: no-repeat;
 	background-position: center center;
+	.nav-is-active & {
+		background-image: url(../images/menu-white.svg);
+	}
 }

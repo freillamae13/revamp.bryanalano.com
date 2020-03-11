@@ -428,6 +428,9 @@ body.nav-is-active{
 }
 
 /*mobile nav*/
+.menu-mobile-nav-container {
+	margin: 0 0 20px;
+}
 div#nav-menu-mobile .columns, div#nav-menu-mobile ul {
 	margin: 0;
 	padding: 0;
@@ -454,7 +457,7 @@ div#nav-menu-mobile .columns, div#nav-menu-mobile ul {
 }
 
 .nav-menu-mobile ul.links li {
-	font-size: 3em;
+	font-size: 30px;
 	font-family: Gotham Bold;
 	text-transform: UPPERCASE;
 }
@@ -575,6 +578,9 @@ div#nav-menu-mobile ul.socials{
 			width: 18px;
 			height: auto;
 			margin: 0 5px 0 0;
+			@include breakpoint(medium down) {
+				width: 24px;
+			}
 		}
 	}
 }
