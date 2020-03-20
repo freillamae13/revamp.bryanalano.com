@@ -78,9 +78,13 @@ p{
 
 #logo,
 .copylogo {
-	width: 75px;
-	height: 78.42px;
+	width: 100px;
+	height: 105px;
 	display: inline-block;
+	@include breakpoint(medium down) {
+		width: 75px;
+		height: 78px;
+	}
 }
 
 #logo {
@@ -93,14 +97,16 @@ p{
 .copylogo a {
 	display: block;
 	height: 100%;
-	background: url(../images/BryanAlano_Logo_o.svg);
+	background: url(../images/main-logo-orange.png) no-repeat;
+	background-size: 100%;
 }
 
 .page-template-page-home #logo a,
 .page-template-page-home .copylogo a,
 .nav-is-active #logo a,
 .nav-is-active .copylogo a {
-	background: url(../images/BryanAlano_Logo_w.svg);
+	background: url(../images/main-logo-white.png) no-repeat;
+	background-size: 100%;
 }
 
 #header ul li{
