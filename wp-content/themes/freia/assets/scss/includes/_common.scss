@@ -209,6 +209,9 @@ body.about #content{
 	color: #FF4400;
 	font-family: "Gotham Book";
 	line-height: 2;
+	@include breakpoint(medium down) {
+		color: #fff;
+	}
 }
 
 .page-template-page-home #footer li, .page-template-page-home #footer li a{
@@ -240,7 +243,7 @@ body.about #content{
 }
 
 #footer .contact-form{
-	float: right;
+	float: left;
 	width: 435px;
 }
 
@@ -585,8 +588,13 @@ div#nav-menu-mobile ul.socials{
 			height: auto;
 			margin: 0 5px 0 0;
 			@include breakpoint(medium down) {
-				width: 24px;
+				width: 28px;
 			}
+		}
+	}
+	.block-title {
+		@include breakpoint(medium down) {
+			color: #fff;
 		}
 	}
 }
