@@ -49,21 +49,32 @@
 	$(window).load(function() {
 
 		$(".gallery__grid--item img").click(function() {
-			$(".lightbox").fadeIn(300);
-			$(".lightbox").addClass('open-lightbox');
-			$(".lightbox").append("<img src='" + $(this).attr("src") + "' alt='" + $(this).attr("alt") + "' />");
-			$("html").css("overflow", "hidden");
 
 			var parent = $(this).parent();
-			if ($(parent).is(":last-child")) {
+			var video_link = $(parent).attr('video-link');
+
+			$(".lightbox").fadeIn(300);
+			$(".lightbox").addClass('open-lightbox');
+
+			$("html").css("overflow", "hidden");
+
+			if (video_link) {
+				var content = "<div class='lightbox--video'><iframe src='"+video_link+"' frameborder='0' allow='fullscreen' allowfullscreen></iframe></div>";
+				$(".lightbox").append(content);
 				$(".arrowr").css("display", "none");
-				$(".arrowl").css("display", "block");
-			} else if ($(parent).is(":first-child")) {
-				$(".arrowr").css("display", "block");
 				$(".arrowl").css("display", "none");
 			} else {
-				$(".arrowr").css("display", "block");
-				$(".arrowl").css("display", "block");
+				$(".lightbox").append("<img src='" + $(this).attr("src") + "' alt='" + $(this).attr("alt") + "' />");
+				if ($(parent).is(":last-child")) {
+					$(".arrowr").css("display", "none");
+					$(".arrowl").css("display", "block");
+				} else if ($(parent).is(":first-child")) {
+					$(".arrowr").css("display", "block");
+					$(".arrowl").css("display", "none");
+				} else {
+					$(".arrowr").css("display", "block");
+					$(".arrowl").css("display", "block");
+				}
 			}
 		});
 
@@ -72,6 +83,7 @@
 			$(".lightbox").removeClass('open-lightbox');
 			$("h1").remove();
 			$(".lightbox img").remove();
+			$(".lightbox .lightbox--video").remove();
 			$("html").css("overflow", "auto");
 		});
 
@@ -86,7 +98,7 @@
 		$(".arrowr").click(function() {
 			var imgSrc = $(".lightbox img").attr("src");
 			var search = $(".gallery__grid--item").find("img[src$='" + imgSrc + "']");
-			
+
 			var newImage = $(search).parent().next().find('img');
 			var newImageURL = $(newImage).attr("src");
 			$(".lightbox img").attr("src", newImageURL);
@@ -102,7 +114,7 @@
 			if (e.keyCode == 39) {
 				var imgSrc = $(".lightbox img").attr("src");
 				var search = $(".gallery__grid--item").find("img[src$='" + imgSrc + "']");
-				
+
 				var newImage = $(search).parent().next().find('img');
 				var newImageURL = $(newImage).attr("src");
 				$(".lightbox img").attr("src", newImageURL);
@@ -160,7 +172,7 @@
 		// 		// $("html").css("overflow", "auto");
 		// 	}
 		// });
-		
+
 
 	});
 

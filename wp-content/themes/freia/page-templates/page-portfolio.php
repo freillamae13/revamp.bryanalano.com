@@ -7,11 +7,18 @@
 	<div class="grid-x">
 		<div class="gallery__grid--wrapper cell large-12 medium-12 small-12">
 			<div class="gallery__grid">
-				<?php $count = 0; if ( have_rows('image_items') ) : while ( have_rows('image_items') ) : $count++; the_row(); ?>
-					<?php $image = get_sub_field('image'); ?>
-					<div class="gallery__grid--item" id="gallery-item-<?= $count; ?>">
-						<img src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>">
-					</div>
+				<?php $count = 0; if ( have_rows('list_items') ) : while ( have_rows('list_items') ) : $count++; the_row(); ?>
+					<?php if ( get_row_layout() == 'image') : ?>
+						<?php $image = get_sub_field('image'); ?>
+						<div class="gallery__grid--item" id="gallery-item-<?= $count; ?>">
+							<img src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>">
+						</div>
+					<?php elseif ( get_row_layout() == 'video') : ?>
+						<?php $image = get_sub_field('image_poster'); ?>
+						<div class="gallery__grid--item" id="gallery-item-<?= $count; ?>" video-link="<?php the_sub_field('video_link'); ?>">
+							<img src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>">
+						</div>
+					<?php endif; ?>
 				<?php endwhile; endif; ?>
 			</div>
 		</div>
